@@ -1,0 +1,335 @@
+/* Tend — brand styles for tend.app pages.
+   Mirrors the SwiftUI palette so the web feels like the app.
+*/
+
+:root {
+  /* Surfaces */
+  --tend-cream:        #FAF6EE;
+  --tend-cream-warm:   #F4ECDD;
+  --tend-surface-hi:   #FFFBF2;
+
+  /* Sage family */
+  --tend-sage:         #A8B8A2;
+  --tend-sage-dark:    #6B7A65;
+  --tend-sage-deep:    #4F5C4A;
+  --tend-sage-light:   #D4DCD0;
+
+  /* Warm accents */
+  --tend-peach:        #E8B4A0;
+  --tend-peach-light:  #F2D5C6;
+  --tend-terracotta:        #C97B5C;
+  --tend-terracotta-deep:   #A66249;
+
+  /* Text */
+  --tend-ink:          #2E2E32;
+  --tend-muted:        #8A8A82;
+
+  /* Soft */
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 4px 20px rgba(120, 110, 90, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tend-cream:        #14151B;
+    --tend-cream-warm:   #1D1E26;
+    --tend-surface-hi:   #252631;
+
+    --tend-sage:         #8FA088;
+    --tend-sage-dark:    #B8C9B0;
+    --tend-sage-deep:    #D3DDCB;
+    --tend-sage-light:   #2D362C;
+
+    --tend-peach:        #D68D70;
+    --tend-peach-light:  #6E4536;
+    --tend-terracotta:        #CC8060;
+    --tend-terracotta-deep:   #8E513B;
+
+    --tend-ink:          #EFEBE2;
+    --tend-muted:        #9A998E;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: linear-gradient(180deg, var(--tend-cream) 0%, var(--tend-cream-warm) 100%);
+  color: var(--tend-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+/* Header / brand mark */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--tend-sage-deep);
+  margin-bottom: 48px;
+}
+
+.brand .mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--tend-sage), var(--tend-sage-dark));
+  position: relative;
+  box-shadow: 0 4px 14px rgba(79, 92, 74, 0.18);
+  flex-shrink: 0;
+}
+
+.brand .mark::before {
+  /* leaf */
+  content: "";
+  position: absolute;
+  inset: 8px;
+  background: var(--tend-cream);
+  border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+  border: 1px solid var(--tend-sage-deep);
+  opacity: 0.95;
+  transform: rotate(8deg);
+}
+
+.brand .mark::after {
+  /* center vein */
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  bottom: 11px;
+  width: 1px;
+  background: var(--tend-sage-deep);
+  opacity: 0.7;
+  transform: translateX(-50%) rotate(8deg);
+}
+
+.brand .wordmark {
+  font-family: "Lora", "Iowan Old Style", "Georgia", serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.3px;
+}
+
+/* Typography */
+
+h1 {
+  font-family: "Lora", "Iowan Old Style", "Georgia", serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.2;
+  color: var(--tend-sage-deep);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-family: "Lora", "Iowan Old Style", "Georgia", serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--tend-sage-deep);
+  margin-top: 40px;
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--tend-sage-dark);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.lede {
+  font-size: 18px;
+  color: var(--tend-ink);
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+ul, ol {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--tend-terracotta-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+strong {
+  color: var(--tend-sage-deep);
+  font-weight: 600;
+}
+
+em {
+  color: var(--tend-muted);
+  font-style: italic;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 14px;
+  background: var(--tend-sage-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--tend-sage-deep);
+}
+
+/* Cards (card-like blocks for sections / FAQ) */
+
+.card {
+  background: var(--tend-surface-hi);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* CTA button (terracotta pill) */
+
+.cta {
+  display: inline-block;
+  background: var(--tend-terracotta);
+  color: white !important;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 500;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(166, 98, 73, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(166, 98, 73, 0.30);
+  opacity: 1;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--tend-sage-light);
+  color: var(--tend-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--tend-muted);
+  border-bottom-color: var(--tend-muted);
+  margin: 0 12px;
+}
+
+/* Hero — landing page */
+
+.hero {
+  text-align: center;
+  padding: 32px 0 48px;
+}
+
+.hero .tagline {
+  font-family: "Lora", "Iowan Old Style", "Georgia", serif;
+  font-style: italic;
+  color: var(--tend-muted);
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.hero .big-mark {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 24px;
+}
+
+.hero .big-mark .mark {
+  width: 96px;
+  height: 96px;
+}
+
+.hero .big-mark .mark::before { inset: 18px; border-width: 1.5px; }
+.hero .big-mark .mark::after  { top: 24px; bottom: 24px; }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+@media (min-width: 540px) {
+  .feature-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.feature-grid .card {
+  text-align: left;
+}
+
+.feature-grid .card .emoji {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Last-updated stamp */
+
+.timestamp {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--tend-muted);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+/* Subtle quotation pull */
+
+.pull {
+  font-family: "Lora", "Iowan Old Style", "Georgia", serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--tend-sage-dark);
+  border-left: 2px solid var(--tend-sage);
+  padding: 4px 0 4px 20px;
+  margin: 24px 0;
+}

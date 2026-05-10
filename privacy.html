@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tend — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#FAF6EE" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14151B" media="(prefers-color-scheme: dark)" />
+<meta name="description" content="Tend's privacy policy. Tend collects no personal data. No accounts, no tracking, no cloud, no ads." />
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main>
+
+  <a class="brand" href="/">
+    <span class="mark"></span>
+    <span class="wordmark">Tend</span>
+  </a>
+
+  <h1>Privacy Policy</h1>
+  <p class="timestamp">Last updated: 10 May 2026</p>
+
+  <p class="lede">Tend collects no personal data. Everything you put into the app stays on your device.</p>
+
+  <h2>Plain English</h2>
+  <ul>
+    <li><strong>No accounts.</strong> You don't need to sign up. There's no log-in.</li>
+    <li><strong>No tracking.</strong> Tend has no analytics SDK, no third-party scripts, no advertising identifiers.</li>
+    <li><strong>No cloud storage.</strong> Your habits, your tend history, and your settings live in the app's local sandbox on your iPhone. They never leave it.</li>
+    <li><strong>No network.</strong> Tend makes no network requests. The app does not contact any server, including ours.</li>
+    <li><strong>No ads.</strong> Tend has no advertising of any kind.</li>
+    <li><strong>No sharing.</strong> We do not share, sell, transfer, or rent your information to anyone — because we don't have it.</li>
+  </ul>
+
+  <h2>What Tend stores on your device</h2>
+  <p>The only data Tend stores on your device is:</p>
+  <ul>
+    <li>The habits you create (name, plant type, creation date)</li>
+    <li>The dates on which you tended each habit</li>
+    <li>Two small preference flags (sound enabled, appearance preference)</li>
+    <li>Two onboarding flags (whether you've seen the welcome flow, whether you've tended for the first time)</li>
+  </ul>
+  <p>
+    This data is stored using Apple's standard <code>SwiftData</code> and
+    <code>UserDefaults</code>. It is automatically backed up to your personal
+    iCloud Backup if (and only if) you have iCloud Backup enabled for the device
+    — that backup is encrypted and inaccessible to us.
+  </p>
+
+  <h2>Required Reason API declarations</h2>
+  <p>Apple requires apps to declare reasons for using certain system APIs. Tend uses:</p>
+  <ul>
+    <li><strong>NSUserDefaults</strong> — to store preferences and onboarding flags
+      (<code>CA92.1</code>: access info from the same app, per documentation).</li>
+  </ul>
+  <p>The full declaration is shipped in the app bundle as <code>PrivacyInfo.xcprivacy</code>.</p>
+
+  <h2>Children</h2>
+  <p>Tend is rated 4+. It collects no personal information from any user, including children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If we ever change anything about how Tend handles data, this page will be
+    updated and the date at the top will change. Because we don't collect contact
+    information, we cannot notify you directly — please check this page if you're
+    curious.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions? Email
+    <a href="mailto:hello@aithelianlabs.com">hello@aithelianlabs.com</a>.
+  </p>
+
+  <p class="pull">
+    If you would like a copy of the data Tend has stored on your device, you
+    can find it under your iPhone's Settings → General → iPhone Storage → Tend
+    → Show All Data, or by opening Tend and tapping into each plant.
+  </p>
+
+  <footer>
+    <a href="/">Home</a>
+    <a href="support.html">Support</a>
+    <a href="mailto:hello@aithelianlabs.com">Contact</a>
+    <p style="margin-top:16px">© 2026 Maulik Desai</p>
+  </footer>
+
+</main>
+</body>
+</html>
