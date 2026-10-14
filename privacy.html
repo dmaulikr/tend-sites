@@ -19,7 +19,7 @@
   </a>
 
   <h1>Privacy Policy</h1>
-  <p class="timestamp">Last updated: 10 May 2026</p>
+  <p class="timestamp">Last updated: 13 October 2026</p>
 
   <p class="lede">Tend collects no personal data. Everything you put into the app stays on your device.</p>
 
@@ -28,7 +28,7 @@
     <li><strong>No accounts.</strong> You don't need to sign up. There's no log-in.</li>
     <li><strong>No tracking.</strong> Tend has no analytics SDK, no third-party scripts, no advertising identifiers.</li>
     <li><strong>No cloud storage.</strong> Your habits, your tend history, and your settings live in the app's local sandbox on your iPhone. They never leave it.</li>
-    <li><strong>No network.</strong> Tend makes no network requests. The app does not contact any server, including ours.</li>
+    <li><strong>No network of our own.</strong> Tend does not contact any server, including ours. The one exception is Apple's: if you buy the optional Greenhouse, the purchase goes through Apple's App Store, which tells Tend only that it was bought — never who you are.</li>
     <li><strong>No ads.</strong> Tend has no advertising of any kind.</li>
     <li><strong>No sharing.</strong> We do not share, sell, transfer, or rent your information to anyone — because we don't have it.</li>
   </ul>
@@ -38,8 +38,10 @@
   <ul>
     <li>The habits you create (name, plant type, creation date)</li>
     <li>The dates on which you tended each habit</li>
-    <li>Two small preference flags (sound enabled, appearance preference)</li>
-    <li>Two onboarding flags (whether you've seen the welcome flow, whether you've tended for the first time)</li>
+    <li>A few preferences and settings (sound, appearance, App Lock, pot glazes)</li>
+    <li>A few small flags (whether you've seen the welcome flow, milestones already celebrated)</li>
+    <li>A small copy of your garden for the Home Screen widgets, kept in the app's own shared container on your iPhone (without plant names if App Lock is on)</li>
+    <li>If you use the garden in AR, a map of the spot where you placed it, so it can find that spot again</li>
   </ul>
   <p>
     This data is stored using Apple's standard <code>SwiftData</code> and
@@ -47,6 +49,15 @@
     iCloud Backup if (and only if) you have iCloud Backup enabled for the device
     — that backup is encrypted and inaccessible to us.
   </p>
+
+  <h2>Camera and Photos</h2>
+  <ul>
+    <li><strong>Camera.</strong> Only the AR garden uses the camera, to place your garden in your room. The camera image is processed on your iPhone and is never recorded, stored or sent anywhere.</li>
+    <li><strong>Photos.</strong> Prints from AR, look-back videos and garden snapshots open in the standard share sheet. Nothing is saved or sent unless you choose where it goes. If you choose Save to Photos, iOS asks for add-only access, which lets Tend add that one picture but never see your library.</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <p>The Greenhouse is an optional, one-time purchase handled entirely by Apple. Tend never sees your name, Apple Account or payment details.</p>
 
   <h2>Required Reason API declarations</h2>
   <p>Apple requires apps to declare reasons for using certain system APIs. Tend uses:</p>
